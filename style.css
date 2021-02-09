@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	background-color: #111111;
+}
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 0 20px 20px;
+	cursor: pointer;
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #ffffff;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.nav li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2rem;
+}
+.nav li a:hover{
+	font-weight: bold;
+	color: #FF4655;
+	letter-spacing: 4px;
+	transition: 0.3s ease-in-out;
+}
+
+.nav li:last-of-type a:hover{
+	color:#087CEA;
+	letter-spacing: 2px;
+
+} 
+
+.nav li{
+	list-style: none;
+	padding: 30px 30px;
+}
+.nav{
+	padding: 0;
+	margin: 0 70px;
+	transition: 0.3s ease;
+	display: none;
+	
+}
+.menu-bg, #menu-bar{
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.menu-bg{
+	z-index: 1;
+	position: fixed;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle,#111111,#111111);
+	opacity: 0.75;
+	transition: 0.25s ease;
+}
+#menu-bar{
+	z-index: 2;	
+	position: fixed;
+}
+.change-bg{
+	width: 300px;
+	height: 100vh;
+	margin-top: 0px;
+	margin-left: 0px;
+	
+}
+.change .bar{
+	background-color: #FF4655;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+}
+
+.bg-img{
+	
+    height: 100vh;
+    width: 100%;
+    transition: 3s;
+    opacity: 0.4;
+    
+    animation-name: animate1;
+    animation-direction: alternate-reverse;
+    animation-duration: 12s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate1{
+    
+    0%{
+        background:  url(images/img_2.jpg) no-repeat center/cover;
+    }
+    30%{
+        background:  url(images/img_3.jpg) no-repeat center/cover;
+    }
+    60%{
+        background:  url(images/img_4.jpg) no-repeat center/cover;
+    }
+    100%{
+        background:  url(images/img_5.jpg) no-repeat center/cover;
+    }
+}
+
+
+.first .title{
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	color: #fff;
+	font-size: 10vh;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+	animation: textanimation 2s ease-in-out;
+}
+
+@keyframes textanimation {
+    0% {
+        letter-spacing: 6px;
+    }
+    100% {
+        letter-spacing: 0px;
+    }
+} 
+
+.text{
+	margin-top: 50px;
+	position: absolute;
+	top: 35%;
+	left: 10%;
+	color: #fff;
+	font-size: 3.5vh;
+	font-family: 'Ubuntu', sans-serif;
+	animation: text 4s;
+}
+
+.text b{
+	color: #FF4655;
+}
+
+.text b:last-of-type{
+	margin-top: 30px;
+}
+
+.text img{
+	
+	border-radius: 50%;
+	vertical-align: middle;
+    
+}
+
+@keyframes text{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.text a button{
+	height: 50px;
+	width: 150px;
+	font-family: 'ubuntu', cursive;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #FF4655;
+	outline: none;
+	border: none;
+	color: #fff;
+	transition: 0.2s ease-in-out;
+	box-shadow: inset 0 0 0 0 #111111;
+
+}
+
+.text a button:hover{
+	box-shadow: inset 150px 0 0 0 #111111;
+	color: #FF4655;
+}
+
+.details{
+	width: 100%;
+	height: 100vh;	
+	background: url(images/bg-2.png) no-repeat center/cover;
+}	
+
+.details .box{
+	height: 80vh;
+	width: 80%;
+	background-color: rgba(17, 17, 17, 0.6);
+	position: absolute;
+	top: 110vh;
+	left: 10%;
+	/* box-shadow: #FF4655; */
+}
+
+.details .box .heading{
+	color: #ffff;
+	font-size: 60px;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.details .box .content{
+	color: #ffffff;
+	margin-top: 40px;
+	margin-left: 40px;
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.details .box .content a{
+	color: rgb(44, 229, 253);
+	text-decoration: none;
+}
+
+.details .box .content a:hover{
+	color: #8EA1E1;
+}
+
+.details .box .content ul li span{
+	color: #FF4655;
+}
+
+.register{
+	width: 100%;
+	height: 100vh;
+	background: url(images/Register.jpg) no-repeat center/cover;
+}
+
+.register .box{
+	height: 80vh;
+	width: 80%;
+	background-color: rgba(17, 17, 17, 0.8);
+	position: absolute;
+	top: 210vh;
+	left: 10%;
+
+}
+
+.register .box .heading{
+	color: #FF4655;
+	font-size: 60px;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.register .content{
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-left: 40px;
+} 
+
+
+.register .box .content a button{
+	height: 50px;
+	width: 150px;
+	font-family: 'ubuntu', cursive;
+	font-size: 20px; 
+	cursor: pointer;
+	background-color: #FF4655;
+	outline: none;
+	border: none;
+	color: #fff;
+	transition: 0.2s ease-in-out;
+	box-shadow: inset 0 0 0 0 #111111;
+
+}
+
+.register .box .content a button:hover{
+	box-shadow: inset 150px 0 0 0 #111111;
+	color: #FF4655;
+}
+
+@media screen and (max-width: 480px){
+	.text{
+		font-size: 2.5vh;
+	}
+
+	.register .content{
+		font-size: 2.5vh;
+	}
+
+	.details .box .content{
+		font-size: 2.5vh;
+	}
+}
