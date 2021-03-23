@@ -7,9 +7,3 @@ function onClickMenu(){
 
 
 
-window.addEventListener('mouseup', function(event){
-	var con = document.getElementsById('menu-bar');
-	if(event.target != con){
-		con.style.display = 'none';
-	}
-})
